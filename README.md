@@ -132,10 +132,38 @@ The analysis yielded several key insights into customer sentiment and product pe
 - VISUALIZATIONS:  Created a dashboard for rating trends, sentiment distribution, and keyword frequency.  
  
 
-# Dashboards
+## Dashboards
 
 <img width="1425" height="802" alt="Dashboard 2-1 (1)" src="https://github.com/user-attachments/assets/a0c4b37f-bcda-4acd-b6c1-7baa044cc667" />
 
 <img width="1415" height="777" alt="Dashboard-1 (1)" src="https://github.com/user-attachments/assets/276723e3-2861-490d-b2a2-87d60559b456" />
 
+## Conclusion 
+- Summary of findings 
+  - Bedsure Product 
+    - Strong Positive Sentiment: The majority of Bedsure reviews (84.6%) are positive, indicating high customer satisfaction. Customers frequently praise the product's softness, comfort, and overall quality. 
+    - Minimal Negative Feedback: Only a small percentage of reviews (8.6%) were negative. These low ratings often mention the fabric's thinness and concerns about longterm durability. 
+    - Stable Rating Trends: The product's ratings have remained consistently high over time. 
+  - Breescrape Product 
+    - Highly Valued Cooling Feature: Positive reviews for Breescape frequently highlight its cooling comfort, breathability, and smooth texture, confirming its main value proposition. 
+    - Fit Issues Drive Negative Reviews: Neutral and negative ratings (2 and 3 stars) are linked to complaints about poor fit, loose corners, and the sheets slipping off mattresses. 
+    - "Helpful" Reviews are Positive: The reviews marked as "helpful" by other buyers are mostly positive (4 or 5 stars), suggesting that satisfied customers significantly influence purchasing decisions. 
+ 
+## Recommendations 
+- Bedsure Product 
+    - Highlight Strengths: Emphasize comfort and softness in marketing materials and product listings. 
+    - Address Weaknesses: Investigate and address concerns about durability and fabric thickness. 
+    - Customer Retention: Proactively engage with dissatisfied customers to rebuild trust and reduce churn. 
+- Breescrape Product 
+    - Leverage USP: Highlight the cooling and breathable properties in marketing campaigns to differentiate from competitors. 
+    - Improve Product Design: Strengthen the product's design by addressing fit and size consistency, which are the main sources of dissatisfaction. 
+    - Encourage Detailed Reviews: Encourage satisfied customers to write more in-depth reviews, as these are more likely to be considered "helpful" by other buyers 
+ 
+## Challenges: 
+  - We could not scrape data using Python due to Amazon data scraping policy/security 
+  - Struggled with creating sentiment columns but solved it with a DAX formula. 
+  - We had to add Word Cloud add-in to my Power Bi before I could get the keywords. 
 
+## Overall Conclusion 
+Both Bedsure and Breescape products have strong customer approval, with a majority of reviews reflecting positive sentiment. However, each brand has distinct challenges to address to improve customer satisfaction and competitive positioning: Bedsure needs to address fabric durability concerns, while Breescape should focus on resolving fit-related issues.  
+By addressing these weaknesses and leveraging their respective strengths in marketing, both companies can improve their market standing.
