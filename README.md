@@ -1,8 +1,15 @@
 # Amazon-Product-Review
-An analysis of customer reviews for two Competing bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025
+An analysis of customers reviews for two Competing bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025.
 
+### Tools used 
+- Amazon Product Review Scraper for scraping the review data from Amazon
+-  Microsoft excel for cleaning the data
+-  SQL server for creating the database
+-  Python for the EDA and sentiment analysis
+-  Power BI for the visualization of insights from the review data
+  
 ## Background 
-### Overview :
+### Overview 
   This project's primary objective was to perform a comprehensive data analysis of customer reviews for two Amazon products: Bedsure and Breescape. The analysis aims to uncover key customer sentiments, identify common pain points, and provide data-driven recommendations for product improvement and business strategy. 
 The project workflow followed these key phases: 
 - Data Cleaning: Preprocessing raw, unstructured review data. 
@@ -22,13 +29,6 @@ The objectives of this analysis are as follows:
 ### Problem 
 The primary problem is to understand the customer sentiment and key pain points for two competing bedding products, Bedsure bedsheets and Breescape bedsheets, based on customer reviews.  
 The analysis aims to identify what drives positive and negative feedback for each product to provide actionable insights for business improvement. 
-
-### Tools used 
-- Amazon Product Review Scraper for scraping the review data from Amazon
--  Microsoft excel for cleaning the data
--  SQL server for creating the database
--  Python for the EDA and sentiment analysis
--  Power BI for the visualization of insights from the review data 
 
 ## Analysis
 
@@ -53,7 +53,7 @@ The schema consists of three primary tables:
 - Reviewer Table: Stores unique reviewer information, with reviewer_id as the primary key. This table ensures each reviewer is recorded only once, even if they post multiple reviews. 
 - Review Table: The core table containing the review text and associated metrics. It uses review_id as its primary key and links to the Product and Reviewer tables using foreign keys. 
 
-This normalized structure ensures data integrity and allows for efficient querying and reporting. 
+This normalized structure ensures data integrity and allows for efficient querying and reporting. Below is the ERD.
 <img width="1087" height="744" alt="erd" src="https://github.com/user-attachments/assets/d83d3956-6141-4411-8fda-1bb461eaa0c3" />
 
 
@@ -80,10 +80,12 @@ The initial phase involved exploring the data to understand its structure, distr
     - Two Groups of Customers Exist: The customer base is likely split into two distinct groups: those who love the product and those who dislike it. 
     - Contrasting Experiences: There isn’t a consensus on the product’s quality. Instead, there’s a significant number of very positive reviews (the peak on the right) and a significant number of negative reviews (the peak on the left). 
 
+First barchart- - Bedsure Review Rating distribution. 
+Second barchart- - Breescrape Review Rating distribution.
  <img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" /> 
- - Bedsure Review Rating distribution
+
  <img width="340" height="238" alt="Screenshot 2025-09-18 001616" src="https://github.com/user-attachments/assets/a284f805-267c-4113-91ec-ed5e3a19378d" />
-- Bedsure Review Rating distribution
+
 
 ### Sentiment Analysis 
 Sentiment analysis was conducted using the TextBlob library, which provides a simple yet effective way to classify the polarity of a text. 
