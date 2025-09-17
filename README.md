@@ -80,11 +80,33 @@ The initial phase involved exploring the data to understand its structure, distr
     - Two Groups of Customers Exist: The customer base is likely split into two distinct groups: those who love the product and those who dislike it. 
     - Contrasting Experiences: There isn’t a consensus on the product’s quality. Instead, there’s a significant number of very positive reviews (the peak on the right) and a significant number of negative reviews (the peak on the left). 
 
+Short clips of the python codes for sentiment analysis:
+'''
+# Perform sentiment analysis on the 'review_text' column
+df['Sentiment_Polarity'] = df['review_text'].apply(lambda x: TextBlob(str(x)).sentiment.polarity)
+
+# Categorize the sentiment based on the polarity score
+def categorize_sentiment(score):
+    if score > 0.1:
+        return 'Positive'
+    elif score < -0.1:
+        return 'Negative'
+    else:
+        return 'Neutral'
+
+df['Sentiment'] = df['Sentiment_Polarity'].apply(categorize_sentiment)
+
+# Get the value counts for each sentiment category
+sentiment_counts = df['Sentiment'].value_counts() 
+'''
+
+
 First barchart- - Bedsure Review Rating distribution. 
 Second barchart- - Breescrape Review Rating distribution.
- <img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" /> 
+<img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" /> 
 
- <img width="340" height="238" alt="Screenshot 2025-09-18 001616" src="https://github.com/user-attachments/assets/a284f805-267c-4113-91ec-ed5e3a19378d" />
+<img width="340" height="238" alt="Screenshot 2025-09-18 001616" src="https://github.com/user-attachments/assets/a284f805-267c-4113-91ec-ed5e3a19378d" />
+
 
 
 ### Sentiment Analysis 
