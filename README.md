@@ -82,10 +82,10 @@ The initial phase involved exploring the data to understand its structure, distr
 
 Short clips of the python codes for sentiment analysis:
 '''
-# Perform sentiment analysis on the 'review_text' column
+Perform sentiment analysis on the 'review_text' column
 df['Sentiment_Polarity'] = df['review_text'].apply(lambda x: TextBlob(str(x)).sentiment.polarity)
 
-# Categorize the sentiment based on the polarity score
+Categorize the sentiment based on the polarity score
 def categorize_sentiment(score):
     if score > 0.1:
         return 'Positive'
@@ -96,7 +96,7 @@ def categorize_sentiment(score):
 
 df['Sentiment'] = df['Sentiment_Polarity'].apply(categorize_sentiment)
 
-# Get the value counts for each sentiment category
+Get the value counts for each sentiment category
 sentiment_counts = df['Sentiment'].value_counts() 
 '''
 
