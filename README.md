@@ -1,5 +1,5 @@
 # Amazon-Product-Review
-An analysis of customer reviews for two bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025
+An analysis of customer reviews for two Competing bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025
 
 ## Background 
 ### Overview :
@@ -80,8 +80,10 @@ The initial phase involved exploring the data to understand its structure, distr
     - Two Groups of Customers Exist: The customer base is likely split into two distinct groups: those who love the product and those who dislike it. 
     - Contrasting Experiences: There isn’t a consensus on the product’s quality. Instead, there’s a significant number of very positive reviews (the peak on the right) and a significant number of negative reviews (the peak on the left). 
 
- <img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" />
+ <img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" /> 
+ - Bedsure Review Rating distribution
  <img width="340" height="238" alt="Screenshot 2025-09-18 001616" src="https://github.com/user-attachments/assets/a284f805-267c-4113-91ec-ed5e3a19378d" />
+- Bedsure Review Rating distribution
 
 ### Sentiment Analysis 
 Sentiment analysis was conducted using the TextBlob library, which provides a simple yet effective way to classify the polarity of a text. 
