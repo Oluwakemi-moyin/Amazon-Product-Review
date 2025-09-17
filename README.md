@@ -54,6 +54,8 @@ The schema consists of three primary tables:
 - Review Table: The core table containing the review text and associated metrics. It uses review_id as its primary key and links to the Product and Reviewer tables using foreign keys. 
 
 This normalized structure ensures data integrity and allows for efficient querying and reporting. 
+<img width="1087" height="744" alt="erd" src="https://github.com/user-attachments/assets/d83d3956-6141-4411-8fda-1bb461eaa0c3" />
+
 
 ### Data Analysis Methodology 
 The analysis was performed in a Jupyter Notebook, following a structured approach to derive insights from the prepared data. 
@@ -77,7 +79,10 @@ The initial phase involved exploring the data to understand its structure, distr
     - Bimodal barchart: This indicates that the data has two clusters of high frequency. 
     - Two Groups of Customers Exist: The customer base is likely split into two distinct groups: those who love the product and those who dislike it. 
     - Contrasting Experiences: There isn’t a consensus on the product’s quality. Instead, there’s a significant number of very positive reviews (the peak on the right) and a significant number of negative reviews (the peak on the left). 
- 
+
+ <img width="349" height="236" alt="Screenshot 2025-09-18 001104" src="https://github.com/user-attachments/assets/0fb4f73e-7b9f-491a-a707-1a858db3e4a7" />
+ <img width="340" height="238" alt="Screenshot 2025-09-18 001616" src="https://github.com/user-attachments/assets/a284f805-267c-4113-91ec-ed5e3a19378d" />
+
 ### Sentiment Analysis 
 Sentiment analysis was conducted using the TextBlob library, which provides a simple yet effective way to classify the polarity of a text. 
 - Polarity Score Calculation: The TextBlob library was used to compute a polarity score for each review, which is a float within the range of [-1.0, 1.0], where -1.0 is negative and +1.0 is positive. 
@@ -92,58 +97,45 @@ Sentiment analysis was conducted using the TextBlob library, which provides a si
     - Low Neutrality: The neutral sentiment, at 6.8%, is the smallest category. This means customers generally have a strong opinion about the product—they either love it or dislike it, with very few feeling indifferent. 
   - Breescrape Product: the sentiment analysis for this product shows a relatively balanced distribution, but with a slight lean toward negative sentiment. 
     - Majority Positive Sentiment: The sentiment is overwhelmingly positive. This indicates that the product is generally well-received by customers who have left reviews. 
-    - Actionable Negative Feedback: The low negative reviews are a valuable resource. With such a low number, you can easily go through them manually to understand the specific issues customers are facing. 
-- Rating Trends: Bedsure Product had an average rating of 5.0 while Breescrape Product had an average rating of 5.0 
-e. Common Pain points: Customers using Bedsure complained mostly of it being 
-too silky, hot sheets and wrinkles. For Breescrape, customers complained mostly 
-of it being too slick, very large, fabric & stitching looks cheap and not cool 
-enough at night. 
-f. Customer satisfaction drivers: For both products: Great cooling sheets, great to 
-sleep in, soft and nice 
-06. 
-What This Means for the 
-Business 
-Bedsure Product: This result paints an excellent picture for the product.  
-It    suggests: 
-● High Product Quality: The product likely meets or exceeds customer 
-expectations for most of its users. 
-● Effective Problem Solving: The low percentage of negative reviews 
-indicates that any issues that arise are not common or are possibly 
-being addressed well by the company. 
-Breescrape Product: Due to its small sample size, it is important not to run 
-into
-                conclusion.  
-● High Product Quality: The product likely meets customer 
-expectations for most of its users. 
-07. 
-Actionable Insights 
-The analysis yielded several key insights into customer sentiment and product 
-performance. 
-Bedsure Product: 
-a. The small percentage of negative and neutral reviews are a goldmine for 
-targeted improvements.  
-b. By analyzing the content of these specific reviews, the company can 
-pinpoint exact issues (e.g., a specific component breaking, a certain size 
-being inaccurate) and  
-c. Fix them, potentially reducing the negative sentiment even further. 
-Breescrape Product 
-a. The negative reviews stem from a single, fixable issue (Too slippery), 
-addressing it could shift a large portion of the sentiment to positive. 
-b. This sentiment analysis is a powerful starting point, but the real value will 
-come from diving into the content of the reviews to understand the "why" 
-behind these numbers. 
-c. The results show a very positive start. The small amount of negative 
-feedback is an opportunity to make targeted improvements and ensure 
-even higher customer satisfaction in the future. 
-Visualization 
-01. Processes 
-a. SENTIMENT ANALYSIS:  
-Classified ratings: 4–5 = Positive, 3 = Neutral, 1–2 = 
-Negative. 
-b. KEYWORD ANALYSIS:  
-Used Word Cloud to extract common words from reviews.   
-c. VISUALIZATIONS:  
-Created a dashboard for rating trends, sentiment 
-distribution, and keyword frequency.  
-02. 
-Dashboards
+    - Actionable Negative Feedback: The low negative reviews are a valuable resource. With such a low number, you can easily go through them manually to understand the specific issues customers are facing.
+- Rating Trends: Bedsure Product had an average rating of 5.0 while Breescrape Product had an average rating of 5.0
+- Common Pain points: Customers using Bedsure complained mostly of it being too silky, hot sheets and wrinkles. For Breescrape, customers complained mostly of it being too slick, very large, fabric & stitching looks cheap and not cool enough at night. 
+- Customer satisfaction drivers: For both products: Great cooling sheets, great to sleep in, soft and nice
+  
+<img width="395" height="298" alt="Screenshot 2025-09-18 001114" src="https://github.com/user-attachments/assets/99709c03-40b7-4b68-8336-c553973e8729" />
+<img width="395" height="297" alt="Screenshot 2025-09-18 001711" src="https://github.com/user-attachments/assets/29c85c04-91be-4e01-ae55-f5c966b9a5a2" />
+
+    
+
+
+### What This Means for the Business 
+- Bedsure Product: This result paints an excellent picture for the product.  It suggests: 
+  - High Product Quality: The product likely meets or exceeds customer expectations for most of its users.
+  - Effective Problem Solving: The low percentage of negative reviews indicates that any issues that arise are not common or are possibly being addressed well by the company. 
+- Breescrape Product: Due to its small sample size, it is important not to run into conclusion.  
+- High Product Quality: The product likely meets customer expectations for most of its users. 
+
+### Actionable Insights 
+The analysis yielded several key insights into customer sentiment and product performance. 
+- Bedsure Product: 
+  - The small percentage of negative and neutral reviews are a goldmine for targeted improvements.  
+  - By analyzing the content of these specific reviews, the company can pinpoint exact issues (e.g., a specific component breaking, a certain size being inaccurate) and  
+  - Fix them, potentially reducing the negative sentiment even further. 
+- Breescrape Product 
+  - The negative reviews stem from a single, fixable issue (Too slippery), addressing it could shift a large portion of the sentiment to positive.
+  -  This sentiment analysis is a powerful starting point, but the real value will come from diving into the content of the reviews to understand the "why" behind these numbers. 
+  - The results show a very positive start. The small amount of negative feedback is an opportunity to make targeted improvements and ensure even higher customer satisfaction in the future. 
+
+## Visualization 
+- SENTIMENT ANALYSIS:  Classified ratings: 4–5 = Positive, 3 = Neutral, 1–2 = Negative. 
+- KEYWORD ANALYSIS:  Used Word Cloud to extract common words from reviews.   
+- VISUALIZATIONS:  Created a dashboard for rating trends, sentiment distribution, and keyword frequency.  
+ 
+
+# Dashboards
+
+<img width="1425" height="802" alt="Dashboard 2-1 (1)" src="https://github.com/user-attachments/assets/a0c4b37f-bcda-4acd-b6c1-7baa044cc667" />
+
+<img width="1415" height="777" alt="Dashboard-1 (1)" src="https://github.com/user-attachments/assets/276723e3-2861-490d-b2a2-87d60559b456" />
+
+
