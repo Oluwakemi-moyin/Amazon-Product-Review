@@ -24,31 +24,35 @@ The primary problem is to understand the customer sentiment and key pain points 
 The analysis aims to identify what drives positive and negative feedback for each product to provide actionable insights for business improvement. 
 
 ### Tools used 
-● Amazon Product Review Scraper for scraping the review data from Amazon 
-● Microsoft excel for cleaning the data 
-● SQL server for creating the database 
-● Python for the EDA and sentiment analysis 
-● Power BI for the visualization of insights from the review data 
+- Amazon Product Review Scraper for scraping the review data from Amazon
+-  Microsoft excel for cleaning the data
+-  SQL server for creating the database
+-  Python for the EDA and sentiment analysis
+-  Power BI for the visualization of insights from the review data 
 
 ## Analysis
+
 ### Data Cleaning 
+
 The raw data for both products required extensive cleaning to ensure accuracy and consistency for analysis. The following steps were applied: 
-● Dropped Irrelevant Columns: Removed empty or unnecessary columns such as message, Page_URL, and Review_URL to streamline the dataset. 
-● Handled Missing Values: Ensured data integrity by dropping rows with missing essential information (e.g., Review_content for the Bedsure product) and filling missing numerical values (e.g., Helpful_count) with a zero. 
-● Standardized Data Types: Converted and formatted numerical and date fields from their string formats to their correct types. 
-● Ratings: Converted Product_stars and Review_rating from text strings (e.g., "4.4 out of 5") to a float data type. 
-● Counts: Extracted and converted Rating_count and Helpful_count from text (e.g., "60,591 global ratings") to integers. 
-● Dates: Converted the date field to a standard date format. 
-● Cleaned Text Fields: Addressed common text issues, including fixing duplicate entries in Reviewer_name and standardizing the Country field by removing extra text. 
-● Removed Duplicates: Identified and removed duplicate review entries based on a combination of Reviewer_name, Review_content, and Date to ensure each review was unique. 
+- Dropped Irrelevant Columns: Removed empty or unnecessary columns such as message, Page_URL, and Review_URL to streamline the dataset. 
+- Handled Missing Values: Ensured data integrity by dropping rows with missing essential information (e.g., Review_content for the Bedsure product) and filling missing numerical values (e.g., Helpful_count) with a zero. 
+- Standardized Data Types: Converted and formatted numerical and date fields from their string formats to their correct types. 
+- Ratings: Converted Product_stars and Review_rating from text strings (e.g., "4.4 out of 5") to a float data type. 
+- Counts: Extracted and converted Rating_count and Helpful_count from text (e.g., "60,591 global ratings") to integers. 
+- Dates: Converted the date field to a standard date format. 
+- Cleaned Text Fields: Addressed common text issues, including fixing duplicate entries in Reviewer_name and standardizing the Country field by removing extra text. 
+- Removed Duplicates: Identified and removed duplicate review entries based on a combination of Reviewer_name, Review_content, and Date to ensure each review was unique. 
+
 This meticulous cleaning process for both the Bedsure and Breescape datasets prepared the data for reliable analysis. 
 
 ### Database Design & Schema 
 To create a robust and scalable data environment, a relational database schema was designed. This schema follows best practices for data normalization. 
 The schema consists of three primary tables: 
-● Product Table: Stores static product information, with product_id as the primary key. This table prevents redundant data storage of product details 
-● Reviewer Table: Stores unique reviewer information, with reviewer_id as the primary key. This table ensures each reviewer is recorded only once, even if they post multiple reviews. 
-● Review Table: The core table containing the review text and associated metrics. It uses review_id as its primary key and links to the Product and Reviewer tables using foreign keys. 
+- Product Table: Stores static product information, with product_id as the primary key. This table prevents redundant data storage of product details 
+- Reviewer Table: Stores unique reviewer information, with reviewer_id as the primary key. This table ensures each reviewer is recorded only once, even if they post multiple reviews. 
+- Review Table: The core table containing the review text and associated metrics. It uses review_id as its primary key and links to the Product and Reviewer tables using foreign keys. 
+
 This normalized structure ensures data integrity and allows for efficient querying and reporting. 
 
 ### Data Analysis Methodology 
@@ -57,8 +61,8 @@ The analysis was performed in a Jupyter Notebook, following a structured approac
 #### Exploratory Data Analysis (EDA) 
 The initial phase involved exploring the data to understand its structure, distribution, and basic characteristics. 
 a. df.info was used to know the structure of the data.  
-   ● Bedsure, which is the major product we reviewed has 12 columns and 370 rows. The date column data type was changed from an object to a datetime using df['date'] = pd.to_datetime(df['date'], format='mixed') .  
-   ● Breescrape, which is the competitor product has 13 columns and 150 rows. 
+   - Bedsure, which is the major product we reviewed has 12 columns and 370 rows. The date column data type was changed from an object to a datetime using df['date'] = pd.to_datetime(df['date'], format='mixed') .  
+   - Breescrape, which is the competitor product has 13 columns and 150 rows. 
 b. df.dropna(inplace=true) was used to remove null or empty values from the columns. 
 c. Descriptive Statistics: Calculated basic statistics for numerical columns (Review_rating, Helpful_count) to understand the central tendency and spread of the data.  
 d. Review_rating statistics: 
