@@ -1,4 +1,4 @@
-📈📊# Amazon-Product-Review
+# 📈📊Amazon-Product-Review
 An analysis of customers reviews for two Competing bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025.
 
 ### Tools used 
@@ -30,7 +30,7 @@ The objectives of this analysis are as follows:
 The primary problem is to understand the customer sentiment and key pain points for two competing bedding products, Bedsure bedsheets and Breescape bedsheets, based on customer reviews.  
 The analysis aims to identify what drives positive and negative feedback for each product to provide actionable insights for business improvement. 
 
-📈## Analysis
+## 📈Analysis
 
 ### Data Cleaning 
 
@@ -46,7 +46,7 @@ The raw data for both products required extensive cleaning to ensure accuracy an
 
 This meticulous cleaning process for both the Bedsure and Breescape datasets prepared the data for reliable analysis. 
 
-📜💻### Database Design & Schema 
+### 📜💻Database Design & Schema 
 To create a robust and scalable data environment, a relational database schema was designed. This schema follows best practices for data normalization. 
 The schema consists of three primary tables: 
 - Product Table: Stores static product information, with product_id as the primary key. This table prevents redundant data storage of product details 
