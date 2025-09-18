@@ -1,4 +1,4 @@
-# Amazon-Product-Review
+:graph # Amazon-Product-Review
 An analysis of customers reviews for two Competing bedding products: Bedsure bedsheets and Breescape bedsheets, based on data cleaning, exploratory data analysis (EDA), and sentiment analysis from years 2020-2025.
 
 ### Tools used 
