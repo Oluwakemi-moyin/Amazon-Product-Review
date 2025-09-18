@@ -81,8 +81,10 @@ The initial phase involved exploring the data to understand its structure, distr
     - Contrasting Experiences: There isn’t a consensus on the product’s quality. Instead, there’s a significant number of very positive reviews (the peak on the right) and a significant number of negative reviews (the peak on the left). 
 
 Short clips of the python codes for sentiment analysis:
-'''
+
+''
 df['Sentiment_Polarity'] = df['review_text'].apply(lambda x: TextBlob(str(x)).sentiment.polarity)
+
 def categorize_sentiment(score):
     if score > 0.1:
         return 'Positive'
@@ -94,7 +96,7 @@ def categorize_sentiment(score):
 df['Sentiment'] = df['Sentiment_Polarity'].apply(categorize_sentiment)
 
 sentiment_counts = df['Sentiment'].value_counts() 
-'''
+''
 
 
 First barchart- - Bedsure Review Rating distribution. 
